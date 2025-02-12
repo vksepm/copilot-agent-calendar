@@ -1,0 +1,112 @@
+/* FullCalendar Styles */
+@import '@fullcalendar/common/main.css';
+@import '@fullcalendar/core/main.css';
+@import '@fullcalendar/daygrid/main.css';
+@import '@fullcalendar/timegrid/main.css';
+@import '@fullcalendar/list/main.css';
+
+/* Calendar Core Styles */
+.fc { 
+  height: 100% !important;
+  font-family: Inter, system-ui, sans-serif;
+  background: white;
+}
+
+/* Calendar Header/Toolbar */
+.fc .fc-toolbar {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Calendar Buttons */
+.fc .fc-button-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.fc .fc-button-primary:not(:disabled):hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+/* Calendar Grid */
+.fc .fc-scrollgrid {
+  border: 1px solid #e5e7eb;
+}
+
+.fc .fc-scrollgrid-section > td {
+  border: 1px solid #e5e7eb;
+}
+
+.fc .fc-daygrid-day {
+  min-height: 100px;
+}
+
+/* Calendar Events */
+.fc-event {
+  border: none;
+  padding: 2px 4px;
+  margin: 1px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.event-content {
+  padding: 2px;
+}
+
+.event-title {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event-location {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* Today Highlight */
+.fc .fc-day-today {
+  background-color: #f3f4f6 !important;
+}
+
+/* Header Cells */
+.fc .fc-col-header-cell {
+  background-color: #f8fafc;
+  padding: 8px 0;
+}
+
+.fc .fc-col-header-cell-cushion {
+  padding: 4px 8px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Time Grid Slots */
+.fc .fc-timegrid-slot {
+  height: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* List View */
+.fc .fc-list {
+  border: 1px solid #e5e7eb;
+}
+
+.fc .fc-list-event:hover td {
+  background-color: #f3f4f6;
+}

@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fc-border-color: #ddd;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: #fff;
+  --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+  --fc-today-bg-color: #e6f1ff;
+  --fc-now-indicator-color: #ea4335;
+  --fc-event-bg-color: #2563eb;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Calendar Container */
+.fc { 
+  height: 100% !important;
+  font-family: Inter, system-ui, sans-serif;
+  background: white;
+}
+
+/* Grid Lines and Borders */
+.fc th,
+.fc td {
+  border: 1px solid var(--fc-border-color);
+}
+
+/* Month View */
+.fc .fc-daygrid-day {
+  min-height: 120px;
+  height: 120px;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 0.875rem;
+  padding: 8px;
+  color: #333;
+}
+
+.fc .fc-daygrid-day-events {
+  margin-top: 4px;
+}
+
+/* Time Grid (Week/Day View) */
+.fc .fc-timegrid-slot {
+  height: 48px;
+  border-top: 1px solid #eee;
+}
+
+.fc .fc-timegrid-slot-minor {
+  border-top: 1px dotted #eee;
+}
+
+.fc .fc-timegrid-slot-label {
+  vertical-align: middle;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 0 8px;
+}
+
+.fc-timegrid {
+  border-right: 1px solid var(--fc-border-color);
+}
+
+.fc .fc-timegrid-slots {
+  border-bottom: 1px solid var(--fc-border-color);
+}
+
+/* Header Toolbar */
+.fc .fc-toolbar {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Headers */
+.fc-col-header-cell {
+  padding: 8px 0;
+  background-color: #f8fafc;
+}
+
+.fc-col-header-cell-cushion {
+  padding: 4px 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Events */
+.fc-event {
+  border: none;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 1px 2px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fc-event-main {
+  padding: 2px 4px;
+  font-size: 0.875rem;
+}
+
+.fc-event-time {
+  font-size: 0.75rem;
+}
+
+.fc-v-event {
+  border-left-width: 4px;
+}
+
+/* Current Time Indicator */
+.fc .fc-timegrid-now-indicator-line {
+  border: 2px solid var(--fc-now-indicator-color);
+}
+
+.fc .fc-timegrid-now-indicator-arrow {
+  border-color: var(--fc-now-indicator-color);
+}
+
+/* Today Highlight */
+.fc .fc-day-today {
+  background: var(--fc-today-bg-color);
+}
+
+/* List View */
+.fc-list-day-cushion {
+  padding: 12px;
+  background: #f8fafc;
+}
+
+/* Buttons */
+.fc-button-primary {
+  background-color: var(--fc-event-bg-color);
+  border-color: var(--fc-event-bg-color);
+}
+
+.fc-button-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.fc-button-primary:disabled {
+  background-color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+/* Scrollbars */
+.fc-scroller::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.fc-scroller::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+
+/* Fix container heights */
+.fc-view-harness {
+  min-height: 700px;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Week numbers */
+.fc-daygrid-week-number {
+  background: #f8fafc;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Loading and Error States */
+.calendar-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  background-opacity: 75%;
+}
+
+.calendar-error {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 0.5rem;
+}

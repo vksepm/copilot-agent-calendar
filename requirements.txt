@@ -1,0 +1,7 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+sqlalchemy==1.4.41
+pydantic-settings==2.1.0
+python-multipart==0.0.7
+pydantic==2.10.6
+pydantic-core==2.27.2
